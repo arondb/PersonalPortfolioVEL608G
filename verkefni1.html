@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Project 1 - The website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/aron_skuggamynd.jfif">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Aron´s Project Portfolio</strong></a>
+									<ul class="icons">
+										<li><a href="https://www.facebook.com/arondagur.beck" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="mailto:arondagurbeck@gmail.com" class="icon brands fa-google"><span class="label">gmail</span></a></li>
+										<li><a href="https://www.instagram.com/aronbeck01/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://www.linkedin.com/in/aron-beck-17b549261" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Project 1 - the website</h1>
+									</header>
+
+									<span class="image main"><img src="images/verkefni1_forsidumynd.png" alt="" /></span>
+
+									<h2>Figuring out how to get started</h2>
+									<p>I started by reading the websites Atli Tobiasson and Sæmundur Guðmundsson made last year. Their websites gave me an overview of how I should do things. Then, to get more detailed instructions I searched how to make a portfolio website on youtoube. This is the video that helped me the most to get started. </p>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/1rlxWvXEKkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+									<hr class="major" />
+
+									<h2>Building the website</h2>
+									<p>
+										After I finished the video above I went strait to the website <a href ="https://html5up.net/"> HTML5 UP! </a> and explored templates. I finally found a template that fitted well for this project. It was the Editorial template. I downloaded that template and opened it in <a href = "https://code.visualstudio.com/">Visual studio Code</a>. Before I could start to modify the template I had to download <a href = "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">live extension</a> to Visual Studio to be able to see changes to the website live.  
+									</p>						
+									
+
+									<hr class="major" />
+
+									<h2>Creating other pages</h2>
+
+									To build other pages, I just copied and pasted the generic.html page into the same directory as the generic.html file was in and then modified the names of the pages I created from generic.html. Those pages were meant to show the CV as well as all the projects. I then deleted the links to the generic.html file because I didn´t want to display that page on the website. Then I made a connections to all of those pages by adding links to them on the sidebar of the index page, as well as in the main zone of the home page. This is how the code for the sidebar looked:  
+									
+									<span class="image small">
+										<img src="images/sidebar_to_select.png" alt="" />
+									</span>
+
+									<p>When the pages had been added to the sidebar I added newest project to it, updated the picture there and updated the "Get in touch" section of it to match the website. When that was finished I copied it to all the other html-files to get the same sidebar everywhere.</p>
+
+
+									<hr class="major" />
+
+									<h2>Editing text</h2>
+									
+									<p>To find out how to change text, I used Ctrl + F and searched for text I saw on the websita and found the corresponding text in the html file. I found out relatively quickly that &lt;p&gt;Text &lt;/p&gt; was the syntax for paragraph and &lt;hi&gt;Header &lt;/hi&gt; was the syntax for headers where i stands for 1 to 4 and represents different headings. </p>
+									<p>Then I found out that &lt;body&gt;Text &lt;/body&gt; was used to split text on pages to different bodies and &lt;section&gt;Text &lt;/section&gt; to split the text to different sections. Those bodies and sections could then be styled using CSS which I will explan in the next chapter. To display different stylings in yeach section &lt;div&gt;Text &lt;/div&gt; was used to divide the section even more.   </p>
+									<p>To display images I used the follwing syntax:</p>
+									<span class="image small">
+										<img src="images/display_image.png" alt="" />
+									</span>
+
+									<hr class="major" />
+
+									<h2>Displaying pdf and videos</h2>
+									<p>To display pdf files and videos in a viewer I found out from <a href = "https://www.w3docs.com/snippets/html/how-to-embed-pdf-in-html.html"> W3docs</a> that the best way was to use a viewer which were added added with the following code: </p>
+									<span class="image small">
+										<img src="images/iframe.png" alt="" />
+									</span>
+									For videos, the directory to the file were to be replace with a link to the video and for Youtube videos, the Youtube website generated the html code to display a specific video from there in a viewer. To get that code you have to go to share and then embedd. 
+
+									<hr class="major" />
+
+									<h2>Styling with CSS</h2>
+
+									<p>It took me quite long time to find out how to change the styling using CSS worked. Googling did not yield me satisfactory results about how the structure of the CSS code worked but I finally was able to figure it out by myself using Ctrl+F and reading the comments in the CSS script. The css script was split into different id´s which then contanied many classes. The id´s where then called in the html-file that were to by styled like this:  &lt;body id ="some id" &gt;. Then if a sector or div were to by style further more "class = "some class"" was added to it like this  &lt;sector id ="some id" &gt;. An examle of css id and class is seen in the picture below.  </p>
+									<span class="image verysmall">
+										<img src="images/css_style.png" alt="" />
+									</span>
+									In the image above, the id´s name is image which holds the information for how all images in a body with specifi id look. Then if images within that body need to be different that is done with a class. Here we have general class namend image, then there is image right and left class also. 
+									<hr class="major" />
+
+									<h2>Uploading to Github with gitbash</h2>
+									<p></p>
+									
+
+									<hr class="major" />
+
+									<h2>Making the webstie public</h2>
+									
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+
+
+						<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+									<li><a href="index.html">Homepage</a></li>
+									
+									<li>
+										<span class="opener">VÉL608G - Projects</span>
+										<ul>
+											<li><a href="verkefni1.html">Project 1 - The Website</a></li>
+											<li><a href="verkefni2.html">Project 2 - Coming Soon</a></li>
+											<li><a href="verkefni3.html">Project 3 - Coming Soon</a></li>
+											<li><a href="lokaverkefni.html">The Final Project - Coming Soon</a></li>
+										</ul>
+									</li>
+									<li>
+										<span class="opener">Team Spark</span>
+										<ul>
+											
+											<li><a href="drawing_view_suspension.html">Technical drawings of the suspension system</a></li>
+										</ul>
+									</li>
+									
+									<li><a href="ferilskra.html">Curriculum Vitae - CV</a></li>
+								</ul>
+								
+							</nav>
+
+						<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Newest projects</h2>
+								</header>
+								<div class="mini-posts">
+									<article>
+										<a href="verkefni1.html" class="image"><img src="images/verkefni1_forsidumynd.png" alt="" /></a>
+										<p>This website as a workbook for the course VÉL608G</p>
+									</article>
+									
+								</div>
+								<ul class="actions">
+									<li><a href="verkefni1.html" class="button">More</a></li>
+								</ul>
+							</section>
+
+						<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Get in touch</h2>
+								</header>
+								<p>You can contact me by using email or by phone.</p>
+								<ul class="contact">
+									<li class="icon solid fa-envelope"><a href="mailto:arondagurbeck@gmail.com">arondagurbeck@gmail.com</a></li>
+									<li class="icon solid fa-phone">(+354) 894-3484</li>
+									
+									
+								</ul>
+							</section>
+
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Aron Dagur Beck. All rights reserved. Images: Aron Dagur Beck  Blurred Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+
+					</div>
+				</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
