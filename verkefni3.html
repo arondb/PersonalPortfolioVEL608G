@@ -35,8 +35,247 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Project 3 - Coming soon</h1>
+										<h1>Project 3 - 3D printing a custom mount for my garmin cycling computer</h1>
+									</header>
+									<span class="image main"><img src="images/verkefni_3/tt_on_bike.png" alt="" /></span>
 									
+
+										<p> I wanted to create a custom mount for my garmin cycling computer on my bike that fitted to the TT-bars
+											 I have on the bike. For durability I used PETG plastic in the mount and also for the test of the mount.</p>
+										<h2>3D modeling</h2>
+										<p> I used Solidworks to create the custom mount. I began by measuring another mount I had which didn´t fit 
+											 my bike but was created for the bike computer.  Then I measured critical dimensions on my bike. You can see them in the table below: </p>
+											 <table>
+												<thead>
+													<tr>
+														<th>Variable</th>
+														<th>Mesurement</th>
+														<th>Length</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>L</td>
+														<td>between TT bars</td>
+														<td>62 mm</td>
+													</tr>
+													<tr>
+														<td>D<sub>bar</sub></td>
+														<td>Diameter of one TT bar</td>
+														<td>22 mm</td>
+													</tr>
+													<tr>
+														<td>D<sub>out</sub></td>
+														<td>Outer diameter of mount</td>
+														<td>34 mm</td>
+													</tr>
+													<tr>
+														<td>D<sub>in</sub></td>
+														<td>Inner diameter of mount</td>
+														<td>30 mm</td>
+													</tr>
+													<tr>
+														<td>D<sub>flange</sub></td>
+														<td>Inner diameter of the flange of the mount</td>
+														<td>25 mm</td>
+													</tr>
+													<tr>
+														<td>t<sub>tot</sub></td>
+														<td>The total thickness of the flat part of the mount</td>
+														<td>5 mm </td>
+													</tr>
+													<tr>
+														<td>t<sub>flange</sub></td>
+														<td>The tickness of the upper flange in the mount</td>
+														<td>1.5 mm</td>
+													</tr>
+													<tr>
+														<td>t<sub>centre</sub></td>
+														<td>The thickness of the centre of the mount</td>
+														<td>1.5 mm</td>
+													</tr>
+													
+												</tbody>
+											</table>
+
+											<p> Then I created a 3d model of the base of the mount (the center of the mount which the bike computer
+											  is supposed to mount) using those critical dimensions. When the base was finished I created the holes for the TT-bar.
+											   To create the part I drew sketches in 2d and extruded them. I stated creating the center part and worked my way out until
+											    I made the holes for the TT-bar last. To make my life simpler, I used mirror to mirror features instead of creating them twice. </p>
+											 <span class="image main"><img src="images/verkefni_3/3d_model_solidworks.png" alt="" /></span>
+											 <hr class="major" />
+											 <h2>Deciding design premises </h2>
+											 <p>To make sure I would be able to print the mount, I had to decide what material I was going to use and if there would be any need for support
+												 material. I also had to find the suitable layer height and find out if I would need to offset any dimensions due to unaccuracy in the printing.  </p>
+											<p>I choose to print the mount out of PETG plastic because it is strong and durable, but not too stiff. Then I choose the printer with the smallest layer heigth
+												 because the surface of the centre of the mount needs to be quite fine. The printer I choose was Pruca i3 MK3S+, which had the smallest layer height of 0.1 mm.</p>
+											<p>To define if there would be need for support material and if I would need to offset any dimensions, I had to make a 3D printing test. </p>
+
+											 <hr class="major" />
+											 <h2>Test</h2>
+										<p>To make sure the mount fitted on my bike and the computer fitted on it, I had to make a
+											 test piece with measured dimensions and print that test. I took the 3d model I had made earlier and cut
+											  everything of it except the centre and one hole to see how the center would look like and how the holes would fit. 
+											  To print I had to export the 3d model of the mount from Solidworks to .stl file. Then I had to download pruca slicer,
+											   available from this link 
+											 <a href = "https://www.prusa3d.com/page/prusaslicer_424/">Link for PrucaSlicer</a> </p>
+										<p>The only thing that was complicated during the installation of PrucaSlicer was to select the right printer,
+											 the printer in the fablab I was using was called Prusa i3 MK3S+. I used this printer because it was able 
+											 to print with 0.1 mm layer height and able to print out of PETG filament</p>
+										<p>The image below is a screenshot taken from the pruca slicer after the part was sliced. When installation of
+											 the software was finished, I had to select the layer height, number 1. Then I had to select the filament I 
+											 was going to print the test out of (number 2) and make sure the right printer was selected (number 3). Then 
+											 I had to go to file and import the stl. file from solidworks of the test. See number 4 on the image below. 
+											 Then I had to add support where the computer was supposed to be mounted on the mount because that area was 
+											 to be printed upside down and because of gravity, 3D printers are not able to do that. I added support by 
+											 selecting support on build plate only (number 5) Then I pressed slice. The button to slice was where number
+											  6 points at before the model was sliced. To transfer the G-code for the 3D printing to the printer I had to
+											   insert a SD-card to the computer and then press number 7 to copy the code to the SD-card.</p>
+										<span class="image main"><img src="images/verkefni_3/3d prentunarprufa.png" alt="" /></span>
+										
+										<p>Then I transfered the SD-card to the printer, selected the right code to print using the swivel knob 
+											on the printer and started printing. The printing of the test took 2 hours and 6 min to finish. When the printing
+											 was finished, I had to clean all support material of the test using a rasp and wire cutters. </p>
+											 <hr class="major" />
+											 <span class="image right"><img src="images/verkefni_3/test.jpg" alt="" /></span>
+										<h2>Results from the test</h2>
+										
+										<p>	After I had cleaned the test I tried to fit the garmin computer to the mount. It fitted but it was a very tight fit. You can see the mount in
+											 the picture on the right side of the page. </p>
+										<p>Then I tried fitting the test on one TT-bar but the hole on the test was to small so it wouldn´t fit. I broke the test by trying to fit it on 
+											the TT-bar. </p>
+										
+										<p>After I broke the test, I measured the diameter of the hole that broke (D<sub>bar</sub>) and measured it as 21.7 mm not 22 mm. Therefore, I had to make modifications
+											based on the test results. I set the diameter of the hole to 22.6 mm to account for error in the printing. I also made modifications to account for the tight fit of the 
+											bike computer. I changed t<sub>flange</sub> to 1.4 mm. 
+										</p>
+										<p>   </p>
+										<p>   </p>
+										<p>   </p>
+										<p>   </p>
+										<hr class="major" />
+										<h2>Making the mount</h2>
+										<p>When I had made the modifications to the 3d file I printed the final results. I followed the same steps and used the same settings
+											 as when I printed the test so I will not go into detail about the setup and how to print here. You can read about how to do that in the test chapter above. The printing
+											 took 6.5 hours to finish. </p>
+										<p>In the video below you can see the final result: </p>
+										<video controls>
+											<source src="images/verkefni_3/video_tt_Baar.mp4" type="video/mp4">
+
+										  Your browser does not support the video tag.
+										  </video>
+
+
+
+										<hr class="major" />
+										<div id = ref>
+										<h2>3D scanning</h2>
+										<p>
+											To create the tabel for the Suzuki Jimny, I did in <a href = "verkefni2.html">project 2</a>, I needed to know how big the table was
+											 going to be. To do that I created a 3D scanning of the interior of the car to know how the table would fit.</p>
+										
+										<h3>Choosing the right software</h3>
+
+										<p>To begin with I did not know what to scan. I started by taking photos of my dad´s truck which is a modified Toyota Hilux. 
+											That didn´t go well because I did not take enough pictures of the car so the software was not able to create 
+											a photogrammetry of the truck. I started by using <a href = "m/products/recap/overview?term=1-YEAR&tab=subscription"> Recap</a>
+											 from Autodesk but since it is an cloud based computing software, it took
+											extremely long time to get the results form them once the photos had been uploaded. I tried using it. The workflow was pretty easy, basically upload 
+											the pictures to the cloud and wait for the program to finish. It took many hours for Recap to finish processing a model of the car and the results were terrible. 
+											I got some weird surface out of it that did not look anywhere near a truck. Therefore, I searched for a photogrammetry
+											 software that used local hardware instead of cloud since then I would not have to wait in queue for other computations to finish
+											  on the server that handles the photogrammetry calculations. Then I tried <a href = "https://colmap.github.io/">Colmap</a> which is a very raw software to process photogrammetry.
+											   Every time I tried to use it I got an error after a few hours so I started my search again for another software. I finally found Meshroom
+											    which had an easy workflow and was relatively quick. Though, I still got a very weird model from I since I had not taken enough pictures
+												 of the truck. Instead of taking another set of pictures of the Hilux, I photographed the interior of the Jimny, more specifically, the
+												  tunnel console since then I could use that 3D model to see how the table I did in project 2 would fit inside the car. </p>
+										<h3>Taking photos</h3>
+										<span class="image main"><img src="images/verkefni_3/Inkedjimni_meshroom_markup.jpg" alt="" /></span>
+										<p>
+											I took 74 photos of the tunnel console inside the Jimny and imported them into Meshroom, then I had to import them to the computer and create a 
+											specific folder for them. Then I had to drag the folder to the red circled area where the pictures are in the picture above and press start. See the 
+											small red circled area near the top banner of the sceen. I got an error for the first time I ran the calculations. To fix the error I had to remove
+											 the pictures that caused the error which was easy because they where highligted in red in the list where the pictures were. See the big red circled
+											  area in the picture above. Then I had to run the calculations again and got no error. When the calculations were finishe I found the 3D model in files
+											   created in Meshroom next to were I saved the meshroom file for the project. The file was in .obj file format. </p>
+										<h3>Viewing results in Inventor</h3>
+										<span class="image main"><img src="images/verkefni_3/inventor_interior.png" alt="" /></span>
+										<p>I opened the scanned interior in <a href = "https://www.autodesk.com/products/inventor/overview?term=1-YEAR&tab=subscription">Inventor</a>. There, I could view the textured results. Quickly, I found out 
+											that the model wasn´t in the right scale. By searching for answer on google, I quickly found out that there was no simple way to scale the model in Inventor. Then, I tried
+											searching for a solution with solidworks and found solution from <a href = "https://grabcad.com/tutorials/tutorial-how-to-scale-stl-in-solidworks">Grabcad</a> on how to scale objects in Solidworks.</p> 
+											<h3>Scaling in Solidworks</h3>
+										<p>To scale the model in I used reference measurement to scale up the model in Solidworks. To scale the model in Solidworks, I had to convert the obj. file to Soldworks part file and then do the following 
+											commands Meshmodeling => Convert to Mesh Body => Surface From Mesh. When I had done that, I could scale the model. I used a reference measurement I had made when I measured the tunnel console for project 2.
+											 Then I had to try scaling factors until the part was scaled correctly. The scaling factor I ended up with was 200. 
+											 </p>
+											 
+											 <span class="image main"><img src="images/verkefni_3/solidworks_convert.png" alt="" /></span>
+											 <h3>Seeing if the table fitted</h3>
+											 <p>When the interior had been scaled, I transfered the assembly of the table for the tunnel console from Inventor to Solidworks and placed it in a same assembly a the interior. 
+												From there I could see how it would fit. In the image below, it can be seen how the table would fit inside the Jimny. 
+											 </p>
+											 <span class="image main"><img src="images/verkefni_3/bord_inni_jimy_wide.png" alt="" /></span>
+											 <p>The image below shows a closeup look on how the table will fit inside the Jimny.</p>
+											 <span class="image main"><img src="images/verkefni_3/bord_inni_jimy.png" alt="" /></span>
+											 <hr class="major" />
+											</div>
+										<h2>Workload</h2>
+										In the table below you can see how much time I spent in project 3. 
+										<hr class="major" />
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Time</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>3D modeling</td>
+													<td>Creating the custom mount in Solidworks</td>
+													<td> 4 Hours</td>
+												</tr>
+												<tr>
+													<td>Test</td>
+													<td>Modifying the mount to make it quicker to print</td>
+													<td>0.5 Hours</td>
+												</tr>
+												<tr>
+													<td>3D Printing Test</td>
+													<td>Printing the test part</td>
+													<td>2.5 Hours</td>
+												</tr>
+												<tr>
+													<td>Modifications</td>
+													<td>Making modifications to to mount based on test results</td>
+													<td>0.5 hours</td>
+												</tr>
+												<tr>
+													<td>3D printing Mount</td>
+													<td>3D printing the mount for the bike</td>
+													<td>6.5 Hours</td>
+												</tr>
+												<tr>
+													<td>3D scanning</td>
+													<td>Taking photos and processing in Meshroom</td>
+													<td>10 Hours</td>
+												</tr>
+												<tr>
+													<td>Documentation</td>
+													<td>Documenting the whole project and adding to the website</td>
+													<td>7 Hours</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>31 Hours</td>
+												</tr>
+											</tfoot>
+										</table>
+										<hr class="major" />
+
 
 								</section>
 
@@ -61,8 +300,8 @@
 										<span class="opener">VÉL608G - Projects</span>
 										<ul>
 											<li><a href="verkefni1.html">Project 1 - The Website</a></li>
-											<li><a href="verkefni2.html">Project 2 - Coming Soon</a></li>
-											<li><a href="verkefni3.html">Project 3 - Coming Soon</a></li>
+											<li><a href="verkefni2.html">Project 2 - Laser and vinyl cutting</a></li>
+											<li><a href="verkefni3.html">Project 3 - 3D printing and 3D scanning</a></li>
 											<li><a href="lokaverkefni.html">The Final Project - Coming Soon</a></li>
 										</ul>
 									</li>
@@ -94,13 +333,23 @@
 								</header>
 								<div class="mini-posts">
 									<article>
-										<a href="verkefni1.html" class="image"><img src="images/verkefni1_forsidumynd.png" alt="" /></a>
-										<p>This website as a workbook for the course VÉL608G</p>
+										<a href="verkefni2.html" class="image"><img src="images/verkefni_2/laser_cutter_in_action.jpg" alt="" /></a>
+										<p>Creating a table for the tunnel console of my car and vinyl cutting an Audi logo.</p>
 									</article>
 									
 								</div>
 								<ul class="actions">
-									<li><a href="verkefni1.html" class="button">More</a></li>
+									<li><a href="verkefni2.html" class="button">More</a></li>
+								</ul>
+								<div class="mini-posts">
+									<article>
+										<a href="verkefni3.html" class="image"><img src="images/verkefni_3/3d_model_solidworks.png" alt="" /></a>
+										<p>3D printing a custom mount for my bike computer on my bike and 3D scanning the tunnel console of my car.</p>
+									</article>
+									
+								</div>
+								<ul class="actions">
+									<li><a href="verkefni3.html" class="button">More</a></li>
 								</ul>
 							</section>
 

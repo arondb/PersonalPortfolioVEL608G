@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Project 2 - Coming soon</title>
+		<title>Project 2 - A table for speaker</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -35,11 +35,208 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Project 2 - Coming soon</h1>
+										<h1>Project 2 - Laser cut table for Suzuki Jimny</h1>
 									</header>
-								
-								</section>
+									
+									<div class = "inner1">
+										<p>Project 2 was to create something with laser cutter and vinyl cutter. I created a table for the tunnel console of my car, a Suzuki Jimny with the laser cutter and an Audi logo with the vinyl cutter.</p>
+									<h2>Kerf test</h2>
+									<span class="image right"><img src="images/verkefni_2/measurement of the cutted squares.jpg" alt="" /></span>
+									<span class="image right"><img src="images/verkefni_2/laser_cutter_in_action.jpg" alt="" /></span>
+									<p>To define how much kerf, the laser cutter I was going to use I had to do a kerf test. I did 
+										the kerf test with Jónas Þór and Tómas Ingi. For the kerf test we had to cut out 10 squares
+										 and measure the difference in length of the squares cut out and put together and hole that
+										  was created in the sheet plastic the squares were cut out of.</p>
 
+									<p>On the right side of the page you can see the laser cutter in action as well as the measurement of the squares.</p>
+									<p>The hole in the sheet plastic measured 9.82 mm and squares cut out combined measured 9.69 mm. Therefore, since 
+										there where 11 cutting lines the laser cut between the squares, the kerf is (9.9-9.69)/11 = 0.019 mm.  </p>
+									<p>Therefore I would have to offset all geometry by 0.0095mm to get accurate sizes. </p>
+
+
+									<hr class="major" />	  
+									<h2>3D modeling in Inventor</h2>
+									This is the table I designed for the car. 
+									<span class="image main"><img src="images/verkefni_2/inventor_assembly.png" alt="" /></span>
+									<h3>Measurements</h3>
+									<p>Before I started modeling the table in Inventor, I measured the tunnel console of the Jimny with vernier caliper. These are the mesurements I made:</p>
+									<table>
+										<thead>
+											<tr>
+												<th>Variable</th>
+												<th>Mesurement</th>
+												<th>Length</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>H<sub>front</sub></td>
+												<td>Height of tunnel console at the front</td>
+												<td>60 mm</td>
+											</tr>
+											<tr>
+												<td>H<sub>rear</sub></td>
+												<td>Height of tunnel console at the rear</td>
+												<td>80 mm</td>
+											</tr>
+											<tr>
+												<td>W<sub>front</sub></td>
+												<td>Width of tunnel console at the front</td>
+												<td>150 mm</td>
+											</tr>
+											<tr>
+												<td>W<sub>rear</sub></td>
+												<td>Width of tunnel console at the rear</td>
+												<td>170 mm</td>
+											</tr>
+											<tr>
+												<td>Length</td>
+												<td>Length of tunnel console</td>
+												<td>160 mm</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<h3>Parametric "top to bottom" Assembly</h3>
+									<p>I used Top to bottom method in creating the table combined with parametric desing. You can watch tutorials
+										 about how that works in the video here below. There you can see how to create and position a part in top to bottom assembly.  </p>
+									
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/S4MK9A2gPIU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+
+									<p>Then I combined the top to bottom method with parametric design were I used driven dimensions from the main part to be able to scale the table if I had to. This video below shows how to access parameters in Inventor. </p>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/52iHEMOAq4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									<p>This is how the parametric table looked in the assembly:</p>
+									<span class="image main"><img src="images/verkefni_2/parametrc_table.png" alt="" /></span>
+									<p>You notice that parameters in parts are gray which means that I am not able to modify them
+										 in the parametric table in the assembly.
+										I could have made link to the assembly for the parameters but it was quicker to create
+										parameters in parts and then link to that part when using the same parameter in other
+										 parts. This created a daisy chain between parts were I had to go to the source part
+										  for each parameter to modify. The parametric tabel holded information about in which
+										   part the parameter was first created.</p>
+									
+
+									<h3>Workflow</h3>
+									<p>The table was pretty simple to do. I stated with an empty assembly in Inventor. There, I began by creating a part, in which I created the tabletop by doing a 2D sketch and then extrude it by
+										 its thickness. Then I created the pressfit joints on the tabletop. I mirrored the pressfit joints about both x and y axis. Then the tabletop was finished.</p>
+									<p>Next, I did the side plates of the table. I also did them by doing a 2d sketch and then extrude it by its thickness. To expess the sketch work, I used a feature called
+										 project geometry which I used to create the outlines of the tabletop in. When I had created one side part, I mirrored it about the origin to place the side plate on both sides.</p>
+									<p>I followed the same workflow when creating the front and back plates, by doing a 2D sketch, project geometry of other parts to the sketch and extrude the plates by its thickness. 
+										But since the height of the tunnel console was more at the back than at front, I had to create two plates.   </p>
+									<hr class="major" />
+									<h2>Checking if the table fitted</h2>
+									<p>In project 3 I had to 3D scan an object. To make sure the table fitted correctly to the tunnel console, I took pictures of the tunnel console and converted them into a 3D feature using meshroom. You can read about that <a href = "verkefni3.html#ref">here</a>. </p>
+									<span class="image main"><img src="images/verkefni_3/Inkedjimni_meshroom_markup.jpg" alt="" /></span>
+									<hr class="major" />
+									<h2>Flattening the assembly</h2>
+									<p>When the assembly of the table was finished, I took all the parts created in that assembly and added to new assembly, in which I created a 2d sketch of a 500 x 500 mm rectangle. That was the size
+										of the plate I was going to cut the table out of. Then, I flushed all of the parts to that sketch and puzzled the them together to fit inside the rectangle. You can see how I puzzled the parts
+										 inside the rectangle in the picture below. </p>
+									<span class="image main"><img src="images/verkefni_2/flatt_assembly.png" alt="" /></span>
+									<p>Then I accessed the sketch of the rectangle and projected the parts to that sketch with project to geometry feature in Inventor. From there, I used offset loop and offsetted all lines
+										outside by half the kerf. You can see how to offset loops in this video here below. </p>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/6J42SmomJZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									<p>When I had offsetted the whole sketch, I exported the sketch to .dxf-file by right clicking the sketch in the folder tree on the left side of the sketch area in Inventor and select export sketch as.
+										 There, I selected save to .dxf file. </p>
+									<hr class="major" />
+									<h2>Setup in Inkscape</h2>
+									<p>
+									When the sketch had been exported, I opened the .dxf file in Inkscape. There, I had to change the linewidth to 0.02 mm for the laser cutter. I did that by clicking ctrl+A on the keyboard,
+									 go to fill and stroke on the right side of the screen, then click stroke style and there I could change the linewidth. Then I had to change the paper size by going to File => Document Properties and change widht and height to 500 x 500 mm.
+									 When that was finished I clicked Ctrl+P, and selected the laser cutter in the printing window. </p>
+									<hr class="major" />
+									<h2>Laser cutting the table</h2>
+
+									<p>The plates I was going to cut the table out of were made out of polymethyl methacrylate and 3x500x500 mm. When I selected print in Incscape, a software for the laser cutter popped up. 
+										There, I could position the cutting lines to the plate I was going to cut out of. That was done in the center window, see the picture below. Then I set the autofocus to thickness, set
+										 the speed to 20%, power to 100% and frequency to 100%. Finally I had to specify the thickness of the plate and click print. When I had selected print, the laser cutter was ready. 
+										 Then I had to turn on the vacum for the cutter and press play on the laser cutter itself. The big green button on the picture below the monitor. </p>
+									<span class="image main"><img src="images/verkefni_2/laser_cutSoftware.jpg" alt="" /></span>
+									<span class="image main"><img src="images/verkefni_2/laserCutter.jpg" alt="" /></span>
+
+									<h3>Problems</h3>
+									<p>
+									I noticed when the laser cutter was printing that it cutted every line twice. Then I figured it out that the sketch I imported into Inkscape from Inventor still had the geometry I created
+									 the offset from which did not take kerf into account. The good thing was that the laser cutter could be stopped though it hadn´t finished so I stopped it to save material so I could use 
+									 the same plate again one I had fixed the sketch. I could do that in Inkscape, which I did by deleting the lines there, that were not meant to be in the cutting route. Once, that was fixed, I printed the table. </p>
+									<p></p>
+									<hr class="major" />
+									<h2>The result</h2>
+									<p>This is the final result. The table was stable and fitted well to the tunnel console.</p>
+									<span class="image main"><img src="images/verkefni_2/result.jpg" alt="" /></span>
+									<hr class="major" />
+									
+
+									<h2>Creating a Audi logo sticker with vinyl cutter</h2>
+
+									<p>I wanted to make a Audi logo for my car (which isn´t an Audi &#128517;). I began by searching the internet for an Audi logo
+										 and finally found one from this website <a href = "https://www.cleanpng.com/png-audi-a3-car-logo-audi-type-ss-audi-logo-5144733/download-png.html"> Clean PNG</a> </p>
+									
+									<p>I then imported that to InkScape. The logo contained a background which I removed with the commands Path => Trace Bitmap... => Multicolor
+										 => Remove Background => Apply. </p>
+										 <p>I then had to remove the fill in the logo and did that by doing the commands: Shift+Ctrl+F => Fill and stroke => Fill => No fill</p>
+										 <span class="image main"><img src="images/verkefni_2/incscape_audi_logo.png" alt="" /></span>
+								
+									
+									<p>When I had removed the fill I resized the image to 100X70mm from the original size with the command Ctrl+A => Width = 100 and
+										 had the aspect ratio locked by clicking on the lock next to the width input box. I then defined the linewidth 0.02 mm for the printer
+										  and saved the file to .svg format. </p>
+									<p>Then I had to move the .svg file to another computer in the fablab which was connected to the vinyl cutter. From that computer I checked 
+										if the size was correct on the picture as well as the line width, and printed the logo to .pdf file. When that was done I placed the vinyl 
+										in the cutter, adjusted the little wheels that holded the vinyl in place and tightened them to the vinyl. Then I opened the audi logi in
+										 .pdf-viewer and printed it with the vinyl cutter. It´s name was Roland. When I had selected the right priner I had to set the width and
+										  height of the printing space and then press print. The final result can be seen in the picture below:</p>
+										  <span class="image main"><img src="images/verkefni_2/audi_in_place.jpg" alt="" /></span>
+
+									</div>
+									<h2>Workload</h2>
+										In the table below you can see how much time I spent in project 2. 
+										<hr class="major" />
+									<table>
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Description</th>
+												<th>Time</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Kerf test</td>
+												<td>Conducting the kerf test</td>
+												<td>0.5 Hours</td>
+											</tr>
+											<tr>
+												<td>3D modeling</td>
+												<td>3D modeling the table, making the assembly flat and converting to .dxf file</td>
+												<td>8 Hours</td>
+											</tr>
+											<tr>
+												<td>Laser cutting</td>
+												<td>Laser cutting and setup in Incscape</td>
+												<td>2 Hours</td>
+											</tr>
+											<tr>
+												<td>Vinyl</td>
+												<td>Setup and printing the Audi logo from vinyl.</td>
+												<td> 1 Hour</td>
+											</tr>
+											<tr>
+												<td>Documentation</td>
+												<td>Documenting the whole project and adding to the website</td>
+												<td>6 Hours</td>
+											</tr>
+											
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="2"></td>
+												<td>17.5 Hours</td>
+											</tr>
+										</tfoot>
+									</table>
+								</section>
+								
 									
 
 						</div>
@@ -63,8 +260,8 @@
 										<span class="opener">VÉL608G - Projects</span>
 										<ul>
 											<li><a href="verkefni1.html">Project 1 - The Website</a></li>
-											<li><a href="verkefni2.html">Project 2 - Coming Soon</a></li>
-											<li><a href="verkefni3.html">Project 3 - Coming Soon</a></li>
+											<li><a href="verkefni2.html">Project 2 - Laser and vinyl cutting</a></li>
+											<li><a href="verkefni3.html">Project 3 - 3D printing and 3D scanning</a></li>
 											<li><a href="lokaverkefni.html">The Final Project - Coming Soon</a></li>
 										</ul>
 									</li>
@@ -96,13 +293,23 @@
 								</header>
 								<div class="mini-posts">
 									<article>
-										<a href="verkefni1.html" class="image"><img src="images/verkefni1_forsidumynd.png" alt="" /></a>
-										<p>This website as a workbook for the course VÉL608G</p>
+										<a href="verkefni2.html" class="image"><img src="images/verkefni_2/laser_cutter_in_action.jpg" alt="" /></a>
+										<p>Creating a table for the tunnel console of my car and vinyl cutting an Audi logo.</p>
 									</article>
 									
 								</div>
 								<ul class="actions">
-									<li><a href="verkefni1.html" class="button">More</a></li>
+									<li><a href="verkefni2.html" class="button">More</a></li>
+								</ul>
+								<div class="mini-posts">
+									<article>
+										<a href="verkefni3.html" class="image"><img src="images/verkefni_3/3d_model_solidworks.png" alt="" /></a>
+										<p>3D printing a custom mount for my bike computer on my bike and 3D scanning the tunnel console of my car.</p>
+									</article>
+									
+								</div>
+								<ul class="actions">
+									<li><a href="verkefni3.html" class="button">More</a></li>
 								</ul>
 							</section>
 
@@ -127,7 +334,6 @@
 
 					</div>
 				</div>
-
 			</div>
 
 		<!-- Scripts -->
