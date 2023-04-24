@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>The Final Project - Coming Soon</title>
+		<title>The Final Project - Lokaverkefni</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -40,34 +40,266 @@
 									</header>
 									<p>I´m sorry but this one is in Icelandic</p>
 
-									<h2>Hönnun</h2>
-									
-									<h3>Ísland<h3>
+									<h2>Fræst íslandskort í þrívídd</h2>
 									<p>
-									Farið var inná <a href = "https://jthatch.com/Terrain2STL/">Terrain2STL</a> til að ná í STL-skrá af íslandi. 
-									Í framhaldi af því var skráin opnuð í Fusion 360 þar sem möskvinn (e.mesh) var gerður fínni til að auðvelda alla vinnu með skránna af  </p>
+									Þetta er verkefni sem ég vann með Birki Erni Erlendssyni, Kristófer Leví Sigtryggssyni og Þorbirni Braga Jónssyni og
+									er lokaverkefni í áfanganum Tölvustudd framleiðsla, VÉL608G.</p>
+									<h2>Hönnun</h2>
+									<p>Verkefnið sem við höfðum í huga var að taka þykka krossviðarplötu og umbreyta í borðplötu fyrir kaffiborð. Þá var planið
+										að fræsa út 
+										Ísland í þrívídd þannig að hæðarlínur sæjust á landinu svipað og borðið sem hefur alltaf verið í Ráðhúsinu nema bara minna.
 
+									</p>
+									<h3>Ísland</h3>
+									<p>Farið var inná <a href = "https://jthatch.com/Terrain2STL/">Terrain2STL</a> til að ná í STL-skrá af Íslandi. 
+									Í framhaldi af því var skráin af Íslandi opnuð í Fusion 360 þar sem möskvinn (e.mesh) var gerður fínni til að auðvelda alla vinnu með 
+									skránna.  Þegar búið var að gera möskvann fínni var stl-skráin af Íslandi flutt yfir í <a href = "https://www.solidworks.com/">Solidworks</a>
+									þar sem botninn á landinu var gerður sléttur svo hægt væri að vinna með það frekar. Þegar það var lokið var borðið aftur flutt yfir í Fusion 360
+									þar sem borðplatan var útbúin í kringum landið. Lesa má nánar um meðhöndlun á þrívíddarlíkani inná persónulegri heimasíðu Arons:  
+									<a href = "lokaverkefni_personulegt.html#3d">Aron´s contribution</a>. Líkan af borðplötunni má sjá á mynd hér fyrir neðan:
+									</p>
+									<span class="image small">
+										<img src="images/Lokaverkefni/Aron´s personal/bord_cad.png" alt="" />
+									</span>	
+									<p> 
+									</p>
+									<p>Fyrir þá sem hafa áhuga af því að nálgast Fusion 360 skránna af borðinu þá geta þeir nágast hana með því að smella á þennan link:
+										<a href="documents/islands_bord v16.f3d" download>Fusion 360 skrá af borðinu</a>
+									</p>
+									
+									<hr class="major" />
 									<h2>Framleiðsla</h2>
 									
+									<h3>Skurðferlar</h3>
+									<p>Til að tryggja að framleiðslan tæki ekki óheyrulega langan tíma voru útbúnir tveir skurðferlar. Annarsvegar einn grófur sem að
+										 var ætlaður til að fræsa út Ísland gróflega. Síðan einn fínan til að hafa yfirborðsáferðina af landinu slétta. Grófi skurðferillinn var útbúinn 
+										 með Pocket clearing aðferðinni. Notaður var 10 mm biti með þremur flautum í þá aðferð. Samkvæmt Fusion 360 átti sá skurðarferilll að taka 36 mínútur.
+										 Notast var við Scallop aðferðina við gerð fína skurðarferilsins. Í honum var 6 mm biti notaður með tveimur flautum. Sá skurðarferill átti að taka 1:27 klst.
+										  Notast var við spindle speed 12500 rpm og feed rate 4000 mm/min í báðum fræsingunum. 
+										  
+										 Myndir hér fyrir neðan sýna grófa og fína skurðarferilinn í Fusion 360: </p>
+
+										 <div class="row">
+											<div class="column">
+											  <img src="images/Lokaverkefni/Aron´s personal/Pocket_clearing.png" alt="Snow" style="width:40%">
+											</div>
+											<div class="column">
+											  <img src= "images/Lokaverkefni/Aron´s personal/scallop.png" alt="Forest" style="width:40%">
+											</div>
+										  </div>
+										  <p>
+										 Lesa má nánar um gerð skurðarferla inná
+										<a id = cnc href = "lokaverkefni_personulegt.html#cnc">Aron´s contribution</a>.  </p>
+										  
+									<p>Þegar búið var að útbúa skurðarferlana var útbúinn kóði sem fræsirinn gat skilið með því að fara í Post Process fyrir hvorn skurðarferil fyrir 
+										sig. Þar þurfti að velja Shopbot PRSalpha fræsinn en sá sem við notuðum var af þeirri gerð. Til að fara í Post Process þurfti að hægri
+										 smella á skurðarferilinn. Þá birtist gluggi þar sem maður þurfti að velja fræsi undir Post. Að lokum þurfti að velja nafn og staðsetningu á
+										 kóðanum áður en kóðinn var útbúinn með því að smella á Post. Sjá mynd fyrir neðan:
+									</p>
+									<div class="row">
+										<div class="column">
+										  <img src="images/Lokaverkefni/select_post_process.png" alt="Snow" style="width:100%">
+										</div>
+										<div class="column">
+										  <img src= "images/Lokaverkefni/post_process.png" alt="Forest" style="width:100%">
+										</div>
+									  </div>
+									
+									<hr class="major" />
 									<h3>Forvinna á borðplötu</h3>
 									<p>Okkur áskornaðist 2 bútar af límtré sem voru tilvaldir í verkefnið. Þessir ákveðnu bútar voru ekki
 										í fullkomnu standi og þurfti því að vinna þá til þess að gera þá að flottum tilvonandi borðplötum.
-										Það vildi svo heppilega til að einn hópmeðlimur þekkti til kennara í húsasmíði við Tækniskólan að
-										hægt var að fá aðgang að tækjum þar til þess að vinna bútana.
+										Það vildi svo heppilega til að einn hópmeðlimur þekkti til kennara í húsasmíði við Tækniskólann að
+										hægt var að fá aðgang að tækjum þar til þess að vinna bútana. 
 									</p>
 									<h4>Slípun</h4>
 									<p>Bútarnir voru báðir settir í slípun þar sem þeir vou gerðir jafn þykkir og fullkomlega sléttir á 
-										öllum hliðum. 
+										öllum hliðum.
 									</p>
 
-										<span class="image small">
-											<img src="images/Lokaverkefni/Slipun.jpeg" alt="" />
-										</span>	
+									<div class="clearfix">
+										<div class="img-container">
+										<img src="images/Lokaverkefni/slipun_taeki.png" alt="" style="width:100%">
+										</div>
+										<div class="img-container">
+										<img src="images/Lokaverkefni/Slipun_plata.png" alt="" style="width:100%">
+										</div>
+									  </div>
+									  <p>
+										   
+									  </p>
+									<h4>Sögun</h4>
+									<p>Til þess að báðir bútarnir yrðu nákvæmlega eins þá þurfti að saga þá í stærð. Því var notuð mjög fullkomin 
+										borðsög sem fór auðvelt með límtréið. Þar var digital mælir sem mældi upp á næsta millimetra lengdina á hverri hlið.
+										Þar sem bútarnir eru talsvert þykkir þurfti að passa að blaðið myndi ekki brenna bútinn.
+									</p>
+									<span class="image small">
+										<img src="images/Lokaverkefni/Bordsog.png" alt="" />
+									</span>	
+									<h4>Fræsun á kanta</h4>
+									<p>Kantarvir voru allir fræstir til þess að þeir væru rúnaðir en ekki beittir. Þetta var gert með borð fræsara sem köntonum
+										var rennt meðfram venjulegum rúnunarbita. Auðvelt verkefni en hér þurfti að vanda til verka til þess að skemma ekki bútinn.
+									</p>
+									<span class="image small">
+										<img src="images/Lokaverkefni/Fraesari_Runun.png" alt="" />
+									</span>	
+									<h4>Söndun</h4>
+									<p>Til þess að fá sem besta yfirborðið á borðplöturnar þá þurfti að sanda, sögunin og fræsunin voru mjög vel gerðar og þess vegna
+										var auðvelt verk að sanda aðeins með sandpappír númer 1.000 til þess að fá smá míkt á yfirborðið og að tréolían muni setjast betur.
+									</p>
+									<span class="image small">
+										<img src="images/Lokaverkefni/sondun.png" alt="" />
+									</span>	
+									<h4>Borðplötur tilbúnar til fræsunar</h4>
+									<video width="720" height="480" autoplay muted>
+										<source src="images/Lokaverkefni/IMG_0422.mp4" type="video/mp4">
+									  </video>
 
+									<hr class="major" />
+									<h2>Fræsun</h2>
+									<p>Fræsirinn sem notaður var við það að fræsa Ísland út í borðplötu var af gerðinni Shopbot. Byrjað 
+										var að fræsa út pocket clearing skurðarferilinn. Þegar hann var búinn að keyra í smá stund komust við að því
+										að hann stefndi á það að fara út af landinu. Það var vegna ónákvæmni í mælingum. Því þurfti að mæla
+										borðplötuna upp á nýtt og uppfæra módelið af borðplötunni í Fusion 360. Þar þurfti að endurstaðsetja
+										Ísland á borðplötunni. Ákveðið var að halda stærðinni á Íslandi eins en í staðinn var hluti af sjónum
+										skorinn af landinu. Nánar má lesa um þær lagfæringar inná <a href = "lokaverkefni_personulegt.html#laga">Aron´s contribution</a>.
+										Þegar það var búið þufti að útbúa skurðarferla upp á nýtt. Þegar búið var
+										að útbúa nýja skurðarferla var hægt að keyra hann í fræsinum. 
+									</p>
+									<p>Áður en hægt var að keyra skurðarferilinn á fræsinum þurfti að festa borðplötuna í fræsinum. Það var gert með skrúfum. Sjá mynd af festingu
+										 fyrir neðan:
+									</p>
+
+									<span class="image small">
+										<img src="images/Lokaverkefni/festing.jpg" alt="" />
+									</span>	
+
+									<p>
+										Þegar búið var að festa plötuna þurfti að staðsetja upphafspunkt hnitakerfisins en hann var í neðra hægra
+										horni plötunnar. X og Y ás fræsisins voru staðsett með auganu en til að staðsetja Z ás fræsisins var notast 
+										við sjálfvirka kvörðun í fræsinu þar sem álplata var lögð yfir borðplötuna og fræsirinn mældi fjarlægðina að henni.
+										Byrjað var á pocket clearing skurðarferlinum en má sjá afrakstur þeirrar fræsingar á mynd hér fyrir neðan:
+
+									</p>
+									<span class="image small">
+										<img src="images/Lokaverkefni/pocket_clearing_real.jpg" alt="" />
+									</span>	
+
+									<p>Pocket clearing skurðurinn tók rúmar 40 mínútur en ekki 36 mínútur eins og Fusion 360 gaf upp. 
+										 Að loknum pocket clearing skurðinum var hægt að framkvæma fína skurðinn. Hann var útbúinn með Scallop skurðarferlinum. 
+										 Myndbandsbrot af þeim skurði má sjá hér fyrir neðan: </p>
+							
+										 <video controls muted  width="560" height="315">
+											<source src="images/Lokaverkefni/scallop.MOV" type="video/mp4">
+	
+										  Your browser does not support the video tag.
+										  </video>
+
+										  <p>Fíni skurðurinn heppnaðist einstaklega vel og náði hann að fanga mikil smáatriði í landinu þó svo að 6 mm flatur biti hefði verið notaður 
+											í hann. Útkomu skurðarins má sjá á mynd hér fyrir neðan:
+										  </p>
+										  <span class="image small">
+											<img src="images/Lokaverkefni/island_cover.jpg" alt="" />
+										</span>	
+										<p>Þegar búið var að fræsa landið út í viðarplötuna þurfti að verja hana og setja fætur undir. Fjallað verður um 
+											það í eftirvinnslu kaflanum hér á eftir. 
+										</p>
+									<hr class="major" />
+									<h2>Eftirvinnsla</h2>
+									<p>Að lokinni fræsingu olíbáru Aron, Birkir og Kristófer með olíu sem Þorbjörn reddaði. Mynd af olíunni má sjá hér fyrir neðan:</p>
+										<span class="image small" >
+											<img src="images/Lokaverkefni/olía.jpg" alt="" />
+										</span>
+										Einnig ákváðum við að sleppa því að nota epoxy og setja frekar plexi gler á plötuna. Aron og Kristófer 
+										skáru út 480mmx360mm með 7.5mm fillet plexi gleri í laserskeranum. Framvæmdu þeir skurðinn í samræmi við verkefni 2:
+										 <a href = "verkefni2.html" >Project 2</a>. Sjá má hvernig platan kom út með plexi glerinu og olíuborin á mynd hér fyrir neðan. 
+
+										 <span class="image small" >
+											<img src="images/Lokaverkefni/m_pexi.jpg" alt="" />
+										</span>
+									<p>
+									  <hr class="major" />
 									<h2>Verkefnaskipulag</h2>
 									<p>Til að halda utan um verkefnið settum við upp kanban borð í <a href = "https://trello.com/signup">Trello</a> ásamt því að
-										 útbúa tímaáætlun með Team Gantt sem er viðbót við Trello</p>
+										 útbúa tímaáætlun með <a href = "https://www.teamgantt.com/blog/introducing-teamgantt-power-trello" >Team Gantt</a> sem er 
+										 viðbót við Trello</p>
+
+									<p>Með kanban borðinu var hægt að brjóta verkefnið niður í viðráðanlega verkþætti. Notast var 
+										við hefðbundna verkefnastjórnun með agile ívafi við 
+									verkefnið en brutum við það niður í 5 fasa en þeir voru hönnun, skurðarferlar, framleiðsla, 
+									skrásetning og kynning. Í hverjum og einum fasa voru mismunandi verkþættir sem þurfti að klára svo hægt væri að halda áfram með næsta fasa.
+									Við notuðumst við þetta svo hægt væri að sjá verkefnið í heild sinni, hvað væri búið og hvað sé eftir.
+									Mynd af kanban borðinu þar sem við héldum utan um verkefnið má sjá á mynd hér fyrir neðan. 
+								  	</p>									
+
+									<span class="image small">
+										<img src="images/Lokaverkefni/kanban_bord.png" alt="" />
+									</span>	
 									
+
+									<h3>Tímalína</h3>
+									<p>Til að tryggja að verkefnið næði að klárast fyrir skiladag þá ákváðum við hversu langan tíma það tæki að klára hvern og einn fasa og hvenær það ætti að framkvæmast.
+									Eins og sjá má á myndinni hér fyrir neðan er búið að brjóta verkefnið niður í 5 spretti með undirliðum, allir þessir sprettir ættu því að klárast fyrir 21.apríl.
+									Til að byrja með fann Birkir líkan af Íslandi eða Íslandskorti. Eftir það tóku Aron og Þorbjörn að sér að gera grófa og fína skurðferla í Fusion 360. Síðan reddaði Þorbjörn
+									fínni borðplötu sem passaði nákvæmlega við það sem við vorum að leitast eftir og sá hann um allt utanáhald á henni áður en hún fór í fræsingu. Á meðan allir sprettirnir stóðu yfir
+									skrifuðum við allir jafnt og þétt inn á síðuna fþað sem við vorum að gera.
+									<p>
+									<p>Því næst mældum við okkur til móts við Hafliða um að fá að fræsa borðplötuna en það seinkaðist vegna uppsetningu á fræsinum tók lengri tíma en búist var við. En að lokinni uppsetningu
+										var hægt að hefjast handa. En akkúrat þegar það var komið að okkar hóp þá hafði rafmagnið slegið út deginum áður og við þurftum við að fresta þessu aftur um einn dag því húsvörðurinn
+										var ekki á svæðinu á sumardeginum fyrsta. En loks þegar við byrjuðum að fræsa þá skiptumst við á að taka vaktir að standa yfir fræsinum á meðan hann vann vinnuna.
+									<p>
+									</p>
+
+									
+									<span class="image small">
+										<img src="images/Lokaverkefni/gantt_rit.png" alt="" />
+									</span>		
+									<hr class="major" />
+
+
+									
+									<span>
+										<hr class="major" />
+									<h2>Útkoman</h2>
+									
+									<p>Borðið lítur hrikalega vel út og mun prýða sér vel í stofunni með heitum kaffibolla</p>
+									<!--<img src="Mynd af kaffiborðinu" alt="" />-->
+
+									<video controls muted  width="560" height="315">
+										<source src="images/Lokaverkefni/yfirlitsmyndband.MOV" type="video/mp4">
+
+									  Your browser does not support the video tag.
+									  </video>
+
+									  <h2>Einblöðungur</h2>
+
+									  <h2>Kynningarmyndband</h2>
+									  <iframe width="560" height="315" src="https://www.youtube.com/embed/YzJKB_2fk2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+									  <h2>Hvað hefði mátt fara betur</h2>
+									  <p>Í pocket clearing skurðarferlinum var stepdown stillt sem 5 mm. Það olli óþarfa álagi á bitann sem notaður var til að 
+										fræsa skurðarferilinn út en það mátti heyra á fræsinum þegar verið var að fræsa út. Einnig þurfti fíni skurðarferillinn að taka of mikið efni 
+										þegar hann var að fara yfir landið sem olli því að oft varð smá efni eftir og skurðurinn óhreinn. Því myndudum við stilla
+										á 3 mm stepdown í stað 5 mm ef við værum að gera verkefnið aftur. 
+									  </p>
+
+									  <h2>Höfundavernd</h2>
+									Þar sem kortið af Íslandi er fengið af open source síðu er okkur heimilt að nota það að vild. Þar sem við viljum endilega
+									að aðrir nýti sér verkefnið okkar til að fræsa sitt eigið hæðarkort ákváðum við að setja MIT höfundarvernd á verkefið en 
+									með þeirri höfundarvernd er leyfinlegt að nota öll okkar gögn sem aðgengileg eru á vefsíðunni að vild en við tökum enga ábyrgð á því.
+								Template af höfundarverndinni var fengin af <a href = "https://opensource.org/license/mit/" >Opensource</a> og filltum við í það til að útbúa 
+							höfundarverndina</p>
+									
+									<p>Copyright (C) 2023 Aron Dagur Beck, Birkir Örn Erlendsson, Kristófer Leví Sigtryggsson, Þorbjörn Bragi Jónsson </p>
+
+									<p>	Permission is hereby granted, free of charge, to any person obtaining a copy of this Product and associated documentation files , to deal in the Product files without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+										
+										The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Product.</p>
+										<p>
+										THE PRODUCT IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE PRODUCT OR THE USE OR OTHER DEALINGS WITH THE PRODUCT.</p>
+
+									</span>
+											
 								</section>
 
 						</div>
@@ -80,59 +312,70 @@
 
 
 						<!-- Menu -->
-							<nav id="menu">
-								<header class="major">
-									<h2>Menu</h2>
-								</header>
-								<ul>
-									<li><a href="index.html">Homepage</a></li>
-									
-									<li>
-										<span class="opener">VÉL608G - Projects</span>
-										<ul>
-											<li><a href="verkefni1.html">Project 1 - The Website</a></li>
-											<li><a href="verkefni2.html">Project 2 - Coming Soon</a></li>
-											<li><a href="verkefni3.html">Project 3 - Coming Soon</a></li>
-											<li><a href="lokaverkefni.html">The Final Project - Coming Soon</a></li>
-										</ul>
-									</li>
-									<li>
-										<span class="opener">Team Spark</span>
-										<ul>
-											
-											<li><a href="drawing_view_suspension.html">Technical drawings of the suspension system</a></li>
-										</ul>
-									</li>
-
-									<li>
-										<span class="opener">Special Projects</span>
-										<ul>
-											<li><a href="bonus_pig.html">CFD analysis of the Bónus Pig</a></li>
-											
-										</ul>
-									</li>
-									
-									<li><a href="ferilskra.html">Curriculum Vitae - CV</a></li>
-								</ul>
+						<nav id="menu">
+							<header class="major">
+								<h2>Menu</h2>
+							</header>
+							<ul>
+								<li><a href="index.html">Homepage</a></li>
 								
-							</nav>
+								<li>
+									<span class="opener">VÉL608G - Projects</span>
+									<ul>
+										<li><a href="verkefni1.html">Project 1 - The Website</a></li>
+										<li><a href="verkefni2.html">Project 2 - a Laser Cut Table</a></li>
+										<li><a href="verkefni3.html">Project 3 - 3D printed garmin mount</a></li>
+										<li><a href="lokaverkefni.html">The Final Project - Lokaverkefni</a></li>
+										<li><a href="lokaverkefni_personulegt.html">The Final Project - My contribution - Lokaverkefni</a></li>
+									</ul>
+								</li>
+								<li>
+									<span class="opener">Team Spark</span>
+									<ul>
+										
+										<li><a href="drawing_view_suspension.html">Technical drawings of the suspension system</a></li>
+									</ul>
+								</li>
+
+								<li>
+									<span class="opener">Special Projects</span>
+									<ul>
+										<li><a href="bonus_pig.html">CFD analysis of the Bónus Pig</a></li>
+										
+									</ul>
+								</li>
+								
+								<li><a href="ferilskra.html">Curriculum Vitae - CV</a></li>
+							</ul>
+							
+						</nav>
 
 						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>Newest projects</h2>
-								</header>
-								<div class="mini-posts">
-									<article>
-										<a href="verkefni1.html" class="image"><img src="images/verkefni1_forsidumynd.png" alt="" /></a>
-										<p>This website as a workbook for the course VÉL608G</p>
-									</article>
-									
-								</div>
-								<ul class="actions">
-									<li><a href="verkefni1.html" class="button">More</a></li>
-								</ul>
-							</section>
+						<section>
+							<header class="major">
+								<h2>Newest projects</h2>
+							</header>
+							<div class="mini-posts">
+								<article>
+									<a href="lokaverkefni.html" class="image"><img src="images/Lokaverkefni/island_cover.jpg" alt="" /></a>
+									<p>CNC cutting topographic map of iceland on to a tabletop</p>
+								</article>
+								
+							</div>
+							<ul class="actions">
+								<li><a href="lokaverkefni.html" class="button">More</a></li>
+							</ul>
+							<div class="mini-posts">
+								<article>
+									<a href="lokaverkefni_personulegt.html" class="image"><img src="images/Lokaverkefni/Aron´s personal/cover_personal.png" alt="" /></a>
+									<p>My contribution to the final project</p>
+								</article>
+								
+							</div>
+							<ul class="actions">
+								<li><a href="lokaverkefni_personulegt.html" class="button">More</a></li>
+							</ul>
+						</section>
 
 						<!-- Section -->
 							<section>
